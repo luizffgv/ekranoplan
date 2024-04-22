@@ -6,4 +6,8 @@ void describe("Operator symbols", () => {
   void it('Maps "+" to Add', () => {
     assert.equal(operators.tokens["+"], operators.Add);
   });
+
+  void it('Maps "-" to Subtract', () => {
+    assert.equal(operators.tokens["-"], operators.Subtract);
+  });
 });
