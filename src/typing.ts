@@ -1,4 +1,4 @@
-import { ToPrimitive } from "./typing/ecma.js";
+import { ToNumeric, ToPrimitive } from "./typing/ecma.js";
 export * as ecma from "./typing/ecma.js";
 
 /**
@@ -21,3 +21,12 @@ export type AdditionResultType<L, R> = L extends object
           : R extends bigint
             ? never
             : number;
+
+/**
+ * The resulting type from subtracting values of two types with the `-`
+ * operator.
+ * @template L - Left operand type.
+ * @template R - Right operand type.
+ */
+export type SubtractionResultType<L, R> =
+  ToNumeric<L> extends ToNumeric<R> ? ToNumeric<R> : never;
