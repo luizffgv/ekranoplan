@@ -30,3 +30,12 @@ export type AdditionResultType<L, R> = L extends object
  */
 export type SubtractionResultType<L, R> =
   ToNumeric<L> extends ToNumeric<R> ? ToNumeric<R> : never;
+
+/**
+ * The resulting type from multiplying values of two types with the `*`
+ * operator.
+ * @template L - Left operand type.
+ * @template R - Right operand type.
+ */
+export type MultiplicationResultType<L, R> =
+  ToNumeric<L> extends ToNumeric<R> ? ToNumeric<R> : never;
