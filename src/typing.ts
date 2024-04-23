@@ -1,5 +1,6 @@
 import { ToNumeric, ToPrimitive } from "./typing/ecma.js";
 export * as ecma from "./typing/ecma.js";
+export * as predicates from "./typing/predicates.js";
 
 /**
  * The resulting type from adding values of two types with the `+` operator.
