@@ -48,3 +48,12 @@ export type MultiplicationResultType<L, R> =
  */
 export type DivisionResultType<L, R> =
   ToNumeric<L> extends ToNumeric<R> ? ToNumeric<R> : never;
+
+/**
+ * The resulting type from taking the remainder of values of two types with the
+ * `%` operator.
+ * @template L - Left operand type.
+ * @template R - Right operand type.
+ */
+export type RemainderResultType<L, R> =
+  ToNumeric<L> extends ToNumeric<R> ? ToNumeric<R> : never;
