@@ -6,7 +6,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 import { describe, it } from "node:test";
-import { And, Equals, Or } from "./predicates.js";
+import { And, Equals, IsTruthy, Not, Or } from "./predicates.js";
 import assert from "node:assert";
 
 void describe("Predicates", () => {
@@ -150,6 +150,116 @@ void describe("Predicates", () => {
       }
       {
         const c: Equals<number, any> = true;
+        assert.equal(c, true);
+      }
+    });
+  });
+
+  void describe("IsTruthy", () => {
+    void it("Should work correctly for simple booleans", () => {
+      {
+        const c: Equals<true, IsTruthy<true>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<false, IsTruthy<false>> = true;
+        assert.equal(c, true);
+      }
+    });
+
+    void it("Should be false for always falsy types", () => {
+      {
+        const c: Equals<false, IsTruthy<false>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<false, IsTruthy<null>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<false, IsTruthy<undefined>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<false, IsTruthy<0>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<false, IsTruthy<"">> = true;
+        assert.equal(c, true);
+      }
+    });
+
+    void it("Should be boolean for arguments that may or may not be true/false", () => {
+      {
+        const c: Equals<boolean, IsTruthy<boolean>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<boolean, IsTruthy<object>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<boolean, IsTruthy<number>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<boolean, IsTruthy<string>> = true;
+        assert.equal(c, true);
+      }
+    });
+  });
+
+  void describe("Not", () => {
+    void it("Should negate simple booleans", () => {
+      {
+        const c: Equals<false, Not<true>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<true, Not<false>> = true;
+        assert.equal(c, true);
+      }
+    });
+
+    void it("Should be true for always falsy types", () => {
+      {
+        const c: Equals<true, Not<false>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<true, Not<null>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<true, Not<undefined>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<true, Not<0>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<true, Not<"">> = true;
+        assert.equal(c, true);
+      }
+    });
+
+    void it("Should be boolean for arguments that may or may not be true/false", () => {
+      {
+        const c: Equals<boolean, Not<boolean>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<boolean, Not<object>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<boolean, Not<number>> = true;
+        assert.equal(c, true);
+      }
+      {
+        const c: Equals<boolean, Not<string>> = true;
         assert.equal(c, true);
       }
     });

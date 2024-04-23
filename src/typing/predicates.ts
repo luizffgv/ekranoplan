@@ -42,3 +42,21 @@ export type Extends<L, R> = [L] extends [R] ? true : false;
  * If either type is `any`, the result is `true`.
  */
 export type Equals<L, R> = And<[Extends<L, R>, Extends<R, L>]>;
+
+/**
+ * A type that is `true` if the type {@link T} is `true`, `false` if the type
+ * {@link T} is always falsy, and `boolean` otherwise.
+ */
+export type IsTruthy<T> = T extends true
+  ? true
+  : T extends false | 0 | null | undefined | ""
+    ? false
+    : boolean;
+
+/**
+ * A type that is `true` if the type {@link T} is falsy, false if the type
+ * {@link T} is truthy, and `boolean` otherwise.
+ * @template T - The type to negate.
+ */
+export type Not<T> =
+  IsTruthy<T> extends true ? false : IsTruthy<T> extends false ? true : boolean;
