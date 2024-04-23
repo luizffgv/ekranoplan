@@ -8,9 +8,9 @@ import { SubtractionResultType } from "../../typing.js";
  * @param rhs - Right operand.
  * @returns Subtraction of {@link rhs} from {@link lhs}.
  */
-export function Subtract<L, R>(lhs: L, rhs: R): SubtractionResultType<L, R> {
+export function subtract<L, R>(lhs: L, rhs: R): SubtractionResultType<L, R> {
   // @ts-expect-error TypeScript doesn't like arithmetic with non-number types
   return (lhs - rhs) as SubtractionResultType<L, R>;
 }
 
-export default Subtract;
+export default subtract;

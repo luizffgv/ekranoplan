@@ -8,9 +8,9 @@ import { DivisionResultType } from "../../typing.js";
  * @param rhs - Right operand.
  * @returns Division of {@link rhs} and {@link lhs}.
  */
-export function Divide<L, R>(lhs: L, rhs: R): DivisionResultType<L, R> {
+export function divide<L, R>(lhs: L, rhs: R): DivisionResultType<L, R> {
   // @ts-expect-error TypeScript doesn't like arithmetic with non-number types
   return (lhs / rhs) as DivisionResultType<L, R>;
 }
 
-export default Divide;
+export default divide;

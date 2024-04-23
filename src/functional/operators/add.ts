@@ -8,9 +8,9 @@ import { AdditionResultType } from "../../typing.js";
  * @param rhs - Right operand.
  * @returns Sum of {@link lhs} and {@link rhs}.
  */
-export function Add<L, R>(lhs: L, rhs: R): AdditionResultType<L, R> {
+export function add<L, R>(lhs: L, rhs: R): AdditionResultType<L, R> {
   // @ts-expect-error TypeScript doesn't like arithmetic with non-number types
   return (lhs + rhs) as AdditionResultType<L, R>;
 }
 
-export default Add;
+export default add;
