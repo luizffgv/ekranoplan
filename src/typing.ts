@@ -39,3 +39,12 @@ export type SubtractionResultType<L, R> =
  */
 export type MultiplicationResultType<L, R> =
   ToNumeric<L> extends ToNumeric<R> ? ToNumeric<R> : never;
+
+/**
+ * The resulting type from dividing values of two types with the `/`
+ * operator.
+ * @template L - Left operand type.
+ * @template R - Right operand type.
+ */
+export type DivisionResultType<L, R> =
+  ToNumeric<L> extends ToNumeric<R> ? ToNumeric<R> : never;
