@@ -7,6 +7,14 @@ void describe("Operator symbols", () => {
     assert.equal(operators.tokens["+"], operators.Add);
   });
 
+  void it('Maps "/" to Divide', () => {
+    assert.equal(operators.tokens["/"], operators.Divide);
+  });
+
+  void it('Maps "*" to Multiply', () => {
+    assert.equal(operators.tokens["*"], operators.Multiply);
+  });
+
   void it('Maps "-" to Subtract', () => {
     assert.equal(operators.tokens["-"], operators.Subtract);
   });
