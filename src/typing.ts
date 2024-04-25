@@ -3,6 +3,14 @@ export * as ecma from "./typing/ecma.js";
 export * as predicates from "./typing/predicates.js";
 
 /**
+ * The last type in a tuple type, or `never` if the tuple is empty.
+ * @template T - Tuple type to check.
+ */
+export type Last<T extends unknown[]> = T extends [...unknown[], infer Last]
+  ? Last
+  : never;
+
+/**
  * The resulting type from adding values of two types with the `+` operator.
  * @template L - Left operand type.
  * @template R - Right operand type.
