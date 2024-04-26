@@ -28,6 +28,10 @@ type IsComposableFnArray<T extends SingleArgumentFunction[]> = T extends [
  * Composes a list of functions into a single function that sends its argument
  * to the first function, then sends the output of the first function to the
  * second, until the last function. Then its output is returned.
+ *
+ * This does not infer types correctly for functions that have different return
+ * types based on the input type. See
+ * https://github.com/microsoft/TypeScript/issues/40179
  * @template T - Tuple type of functions to compose.
  * @param functions - Functions to compose.
  * @returns A function produced from the composition.
