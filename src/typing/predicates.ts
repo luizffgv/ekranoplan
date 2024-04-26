@@ -60,3 +60,12 @@ export type IsTruthy<T> = T extends true
  */
 export type Not<T> =
   IsTruthy<T> extends true ? false : IsTruthy<T> extends false ? true : boolean;
+
+/**
+ * A type that is {@link A} if {@link P} is {@link IsTruthy | truthy}, and
+ * {@link B} otherwise.
+ * @template P - Predicate type to check.
+ * @template A - Type to choose if P is truthy.
+ * @template B - Type to choose otherwise.
+ */
+export type Choice<P, A, B> = IsTruthy<P> extends true ? A : B;
