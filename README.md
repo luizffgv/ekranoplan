@@ -1,5 +1,5 @@
 <div align="center">
-    <img src="logo.png" alt="Logo" style="width: 512px; max-width: 90%">
+    <img src="logo.png" alt="Logo" style="width: 256px; max-width: 90%">
 </div>
 
 # Ekranoplan

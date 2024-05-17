@@ -1,7 +1,7 @@
 {
-  "name": "ekranoplan",
+  "name": "@luizffgv/ekranoplan",
   "description": "A general purpose JavaScript library to reduce boilerplate and complexity in your code",
-  "version": "1.0.0",
+  "version": "0.0.0-experimental.0",
   "author": "Luiz Fernando F. G. Valle <luizffgv10@gmail.com>",
   "bugs": {
     "url": "https://github.com/luizffgv/ekranoplan/issues"
