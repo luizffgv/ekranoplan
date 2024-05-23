@@ -1,3 +1,8 @@
+/**
+ * Provides utilities related to the type system.
+ * @module
+ */
+
 import { ToNumeric, ToPrimitive } from "./typing/ecma.js";
 export * as ecma from "./typing/ecma.js";
 export * as predicates from "./typing/predicates.js";

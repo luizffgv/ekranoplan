@@ -1,3 +1,8 @@
+/**
+ * Provides type system utilities related to tuple types.
+ * @module
+ */
+
 /** Any tuple type, including arrays. */
 export type Tuple = [...unknown[]];
 
