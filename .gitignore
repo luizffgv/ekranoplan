@@ -7,6 +7,9 @@ dist/
 # Generated type declarations
 types/
 
+# Generated documentation pages
+/docs/
+
 # Packed package
 /*.tgz
 
