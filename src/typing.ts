@@ -1,7 +1,9 @@
+/**
+ * Provides utilities related to the type system.
+ * @module
+ */
+
 import { ToNumeric, ToPrimitive } from "./typing/ecma.js";
-export * as ecma from "./typing/ecma.js";
-export * as predicates from "./typing/predicates.js";
-export * as tuple from "./typing/tuple.js";
 
 /**
  * The last type in a tuple type, or `never` if the tuple is empty.

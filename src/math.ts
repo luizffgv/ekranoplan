@@ -1,4 +1,9 @@
 /**
+ * Provides math utilities.
+ * @module
+ */
+
+/**
  * Linearly interpolates between two numbers.
  * @param from - Starting value.
  * @param to - Final value.

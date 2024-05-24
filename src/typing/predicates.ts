@@ -1,4 +1,9 @@
 /**
+ * Provides boolean logic operations at the type level.
+ * @module
+ */
+
+/**
  * A type that is `true` if the booleans provided in {@link B} are all `true`,
  * or `boolean` if there are no `false` booleans, or `false` otherwise.
  *

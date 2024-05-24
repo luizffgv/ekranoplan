@@ -1,6 +1,7 @@
 /**
- * @file Contains types that mimic the types and abstract operations described
+ * Contains types that mimic the types and abstract operations described
  * in the ECMAScript language specification.
+ * @module
  */
 
 /** Type union containing all primitive types. */

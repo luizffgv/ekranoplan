@@ -1,4 +1,10 @@
 /**
+ * Adds helpers for performing common conversions between types, such as
+ * narrowing.
+ * @module
+ */
+
+/**
  * Identity function if {@link value} is not nullish, otherwise throws.
  *
  * This essentially returns {@link value} but with `null | undefined` removed

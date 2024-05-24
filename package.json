@@ -12,6 +12,8 @@
     "eslint-plugin-jsdoc": "^48.2.3",
     "prettier": "^3.2.5",
     "rimraf": "^5.0.5",
+    "typedoc": "^0.25.13",
+    "typedoc-material-theme": "^1.0.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.7.1"
   },
@@ -41,6 +43,7 @@
   "scripts": {
     "build": "tsc --removeComments --outdir dist",
     "check-formatting": "prettier -c .",
+    "docs": "typedoc --options typedoc.config.js",
     "generate-types": "tsc --declaration --emitDeclarationOnly --outdir types",
     "lint": "eslint .",
     "prepare": "npm run check-formatting && npm run lint && npm run rebuild && npm run regenerate-types && npm run test",
