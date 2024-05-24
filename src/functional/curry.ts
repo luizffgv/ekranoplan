@@ -23,8 +23,8 @@ type Curry_<
 
 /**
  * The type of a function after it's curried.
- * @param F - Function to curry.
- * @param N - Number of arguments to split into. The last function takes all
+ * @template F - Function to curry.
+ * @template N - Number of arguments to split into. The last function takes all
  * remaining arguments.
  */
 export type Curry<
