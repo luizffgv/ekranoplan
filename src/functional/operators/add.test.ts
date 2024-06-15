@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
-import assert from "node:assert";
 import add from "./add.js";
+import assert from "node:assert";
 
 void describe("Add", () => {
   void it("Should add two numbers", () => {

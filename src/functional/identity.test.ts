@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
-import identity from "./identity.js";
 import assert from "node:assert";
+import identity from "./identity.js";
 
 void describe("Identity", () => {
   void it("Should return the value passed in as-is", () => {

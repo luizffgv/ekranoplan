@@ -1,7 +1,7 @@
-import { describe, it } from "node:test";
-import assert from "node:assert";
 import * as operators from "./operators.js";
+import { describe, it } from "node:test";
 import add from "./operators/add.js";
+import assert from "node:assert";
 import divide from "./operators/divide.js";
 import multiply from "./operators/multiply.js";
 import subtract from "./operators/subtract.js";
