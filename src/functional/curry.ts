@@ -60,7 +60,7 @@ export function curry<
 
   // @ts-expect-error Making this type-safe seems like a lot of work and I'm not
   // smart enough right now.
-  return (...args: unknown[]) => curry(fn, arity - 1, ...[..._args, ...args]);
+  return (...args: unknown[]) => curry(fn, arity - 1, ..._args, ...args);
 }
 
 export default curry;
