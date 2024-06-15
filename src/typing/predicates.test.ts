@@ -5,8 +5,8 @@
 // We disable the rule here because here we test some type system tomfoolery
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
-import { describe, it } from "node:test";
 import { And, Equals, IsTruthy, Not, Or } from "./predicates.js";
+import { describe, it } from "node:test";
 import assert from "node:assert";
 
 void describe("Predicates", () => {

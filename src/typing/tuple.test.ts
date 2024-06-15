@@ -2,10 +2,10 @@
  * @file This file has compile-time tests for the tuple module.
  */
 
+import { ConcatTuple, TrimTuple } from "./tuple.js";
 import { describe, it } from "node:test";
 import { Equals } from "./predicates.js";
 import assert from "node:assert";
-import { ConcatTuple, TrimTuple } from "./tuple.js";
 
 void describe("Tuple", () => {
   void describe("ConcatTuple", () => {

@@ -9,16 +9,18 @@ type Value<N extends Integer> = N["length"];
 type Curry_<
   F extends (...args: never[]) => unknown,
   N extends number,
-  Cur extends Integer,
+  Current extends Integer,
 > =
-  N extends Value<Cur>
+  N extends Value<Current>
     ? F
     : Parameters<F> extends [infer First, ...infer Rest]
       ? (
           arg: First,
-        ) => Curry_<(...args: Rest) => ReturnType<F>, N, Increment<Cur>>
+        ) => Curry_<(...args: Rest) => ReturnType<F>, N, Increment<Current>>
       : Parameters<F> extends Array<infer T>
-        ? (arg: T) => Curry_<(...args: T[]) => ReturnType<F>, N, Increment<Cur>>
+        ? (
+            arg: T,
+          ) => Curry_<(...args: T[]) => ReturnType<F>, N, Increment<Current>>
         : never;
 
 /**
@@ -58,7 +60,7 @@ export function curry<
 
   // @ts-expect-error Making this type-safe seems like a lot of work and I'm not
   // smart enough right now.
-  return (...args: unknown[]) => curry(fn, arity - 1, ...[..._args, ...args]);
+  return (...args: unknown[]) => curry(fn, arity - 1, ..._args, ...args);
 }
 
 export default curry;

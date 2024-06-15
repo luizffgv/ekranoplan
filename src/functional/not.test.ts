@@ -1,6 +1,6 @@
 import { describe, it } from "node:test";
-import not from "./not.js";
 import assert from "node:assert";
+import not from "./not.js";
 
 void describe("Not", () => {
   void it("Should negate a non-function value", () => {
