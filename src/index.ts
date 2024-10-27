@@ -37,3 +37,5 @@ export type {
 } from "./typing.js";
 
 export { lerp } from "./math.js";
+
+export { throwIfNull, trySpecify } from "./conversions.js"
