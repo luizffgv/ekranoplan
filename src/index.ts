@@ -38,4 +38,4 @@ export type {
 
 export { lerp } from "./math.js";
 
-export { throwIfNull, trySpecify } from "./conversions.js"
+export { throwIfNull, trySpecify } from "./conversions.js";
