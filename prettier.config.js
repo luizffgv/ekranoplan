@@ -1,3 +1,2 @@
-export default {
-  endOfLine: "crlf",
-};
+export default {};
+
